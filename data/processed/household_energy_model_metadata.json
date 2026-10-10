@@ -1,0 +1,55 @@
+{
+  "model_version": "household_energy_lgbm_v1",
+  "model_type": "separate household time-series model",
+  "target": "electricity_consumption",
+  "target_unit": "source units (CSV does not document a physical unit)",
+  "training_rows": 26496,
+  "validation_rows": 5300,
+  "validation_method": "last 20% of training observations by timestamp",
+  "validation_metrics": {
+    "mae_source_units": 50.555301037169684,
+    "rmse_source_units": 68.7500667592117,
+    "wape": 0.17753405534606903
+  },
+  "best_iteration": 105,
+  "feature_names": [
+    "temperature",
+    "var1",
+    "pressure",
+    "windspeed",
+    "var2",
+    "hour",
+    "day_of_week",
+    "day_of_year",
+    "month",
+    "year",
+    "hour_sin",
+    "hour_cos",
+    "day_of_year_sin",
+    "day_of_year_cos"
+  ],
+  "categorical_features": [
+    "var2"
+  ],
+  "category_levels": {
+    "var2": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "training_period": [
+    "2013-07-01 00:00:00",
+    "2017-06-23 23:00:00"
+  ],
+  "prediction_period": [
+    "2013-07-24 00:00:00",
+    "2017-06-30 23:00:00"
+  ],
+  "prediction_rows_available": 8568,
+  "prediction_type": "historical held-out input forecast; not live household telemetry",
+  "source_files": [
+    "data/raw/energy/household/train.csv",
+    "data/raw/energy/household/test.csv"
+  ]
+}

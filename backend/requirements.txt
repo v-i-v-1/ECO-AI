@@ -1,0 +1,3 @@
+-r ../research/models/energy/requirements.txt
+fastapi
+uvicorn[standard]

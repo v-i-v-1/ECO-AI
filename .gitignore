@@ -1,0 +1,16 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
+data/raw/
+data/interim/
+data/processed/energy_training/
+data/processed/energy_model_v*.txt
+data/processed/energy_model_v*_metadata.json
+
+research/results/**

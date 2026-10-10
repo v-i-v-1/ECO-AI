@@ -1,0 +1,6 @@
+polars
+pyarrow
+lightgbm
+scikit-learn
+joblib
+pandas
